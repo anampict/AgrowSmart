@@ -61,7 +61,7 @@ fun DaftarScreen(modifier: Modifier = Modifier) {
         }
         Spacer(modifier = Modifier.height(32.dp))
 
-
+        //
         Text(
             text = "DAFTAR", style = TextStyle(
                 fontFamily = rubikfamily, fontWeight = FontWeight.Medium, fontSize = 20.sp
