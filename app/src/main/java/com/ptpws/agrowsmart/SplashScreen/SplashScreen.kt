@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -80,6 +81,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier.offset(y = 280.dp)
             )
         }
+        Spacer(modifier = Modifier.height(66.dp))
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -106,31 +108,34 @@ fun SplashScreen(modifier: Modifier = Modifier) {
 
 
         Button(
-            onClick = { /*TODO*/ }, contentPadding = PaddingValues(0.dp),
+            onClick = { /*TODO*/ },
+            contentPadding = PaddingValues(0.dp),
             modifier = Modifier
-                .align(alignment = Alignment.BottomCenter)
+                .align(Alignment.BottomCenter)
                 .padding(bottom = 40.dp)
                 .width(77.dp)
                 .height(48.dp),
             shape = RoundedCornerShape(7.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xff33A506))
         ) {
-            Column(modifier = Modifier.fillMaxWidth()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize(), // memastikan isi mengisi seluruh area tombol
+                contentAlignment = Alignment.Center // membuat teks di tengah tombol
+            ) {
                 Text(
                     text = "MULAI",
                     style = TextStyle(
                         platformStyle = PlatformTextStyle(includeFontPadding = false),
-                        color = Color(0xffFFFFFF), fontFamily = rubikfamily, fontWeight = FontWeight.Medium
+                        color = Color.White,
+                        fontFamily = rubikfamily,
+                        fontWeight = FontWeight.Medium
                     ),
-                    maxLines = 1,
-                    modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center
                 )
-
             }
-
-
         }
+
 
     }
 

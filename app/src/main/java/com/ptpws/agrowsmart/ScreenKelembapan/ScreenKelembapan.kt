@@ -57,6 +57,7 @@ fun ScreenKelembapan(modifier: Modifier) {
     var isChecked2 by remember { mutableStateOf(false) }
     var isChecked3 by remember { mutableStateOf(false) }
     var isEnabled by remember { mutableStateOf(true) }
+
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -71,7 +72,7 @@ fun ScreenKelembapan(modifier: Modifier) {
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.icon_back),
-                    contentDescription = null
+                    contentDescription = null, tint = Color.Black
                 )
 
                 Spacer(modifier = Modifier.width(120.dp))
@@ -80,7 +81,7 @@ fun ScreenKelembapan(modifier: Modifier) {
                     text = "Halaman",
                     textAlign = TextAlign.Center,
                     style = TextStyle(fontSize = 20.sp),
-                    fontFamily = rubikfamily, fontWeight = FontWeight.Medium
+                    fontFamily = rubikfamily, fontWeight = FontWeight.Medium, color = Color.Black
                 )
             }
 
@@ -106,7 +107,7 @@ fun ScreenKelembapan(modifier: Modifier) {
                     ) {
                         Icon(
                             painter = painterResource(id = R.drawable.air),
-                            contentDescription = null
+                            contentDescription = null, tint = Color.Unspecified
                         )
 
                         Spacer(modifier = Modifier.width(8.dp))
@@ -130,7 +131,10 @@ fun ScreenKelembapan(modifier: Modifier) {
 
                     Text(
                         text = "Nama custom",
-                        fontSize = 16.sp, fontFamily = rubikfamily, fontWeight = FontWeight.Medium
+                        fontSize = 16.sp,
+                        fontFamily = rubikfamily,
+                        fontWeight = FontWeight.Medium,
+                        color = Color.Black
                     )
 
                     Text(
